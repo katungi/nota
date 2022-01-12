@@ -16,7 +16,7 @@ import type React from 'react';
 
 export const transparentTheme = EditorView.theme({
   '&': {
-    backgroundColor: 'transparent !important',
+    backgroundColor: '#282c34 !important',
     height: '100%',
   }
 })
@@ -61,7 +61,14 @@ const useCodeMirror = <T extends Element>(props: Props): [React.MutableRefObject
         bracketMatching(),
         defaultHighlightStyle.fallback,
         highlightActiveLine(),
-        javascript(),
+        markdown({
+          base: markdownLanguage,
+          codeLanguages: languages,
+          addKeymap: true
+        }),
+        oneDark,
+        transparentTheme,
+        syntaxHighlighting,
         EditorView.lineWrapping,
         EditorView.updateListener.of(update => {
           if(update.changes) {
