@@ -5,7 +5,7 @@ import {URL} from 'url';
 async function createWindow() {
   const browserWindow = new BrowserWindow({
     show: false, // Use 'ready-to-show' event to show window
-    vibrancy: 'under-window',
+    vibrancy: 'ultra-dark',
     visualEffectState: 'active',
     webPreferences: {
       nativeWindowOpen: true,
