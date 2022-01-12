@@ -1,5 +1,8 @@
 .app {
   background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
 }
 
 /*button {*/

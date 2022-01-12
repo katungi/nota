@@ -1,5 +1,6 @@
 html, body {
-background-color: #282c34;
+  background-color: #282c34;
+  height: 100%;
 }
 body{
   margin: 0;
@@ -10,4 +11,8 @@ body{
 
 code {
   font-family: 'source-code-pro', Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+#root {
+  height: 100%;
 }

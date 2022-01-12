@@ -7,13 +7,14 @@ async function createWindow() {
     show: false, // Use 'ready-to-show' event to show window
     vibrancy: 'ultra-dark',
     visualEffectState: 'active',
+    autoHideMenuBar: false,
     webPreferences: {
       nativeWindowOpen: true,
       webviewTag: false, // The webview tag is not recommended. Consider alternatives like iframe or Electron's BrowserView. https://www.electronjs.org/docs/latest/api/webview-tag#warning
       preload: join(__dirname, '../../preload/dist/index.cjs'),
-    },
-  });
+    }});
 
+  browserWindow.setTitle(require('../../../package.json').name)
   /**
    * If you install `show: true` then it can cause issues when trying to close the window.
    * Use `show: false` and listener events `ready-to-show` to fix these issues.
@@ -22,7 +23,6 @@ async function createWindow() {
    */
   browserWindow.on('ready-to-show', () => {
     browserWindow?.show();
-
     if (import.meta.env.DEV) {
       browserWindow?.webContents.openDevTools();
     }
