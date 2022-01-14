@@ -1,47 +1,45 @@
-# Vite Electron Builder Boilerplate
+# Nota Markdown Editor
 
-[![GitHub issues by-label](https://img.shields.io/github/issues/cawa-93/vite-electron-builder/help%20wanted?label=issues%20need%20help&logo=github)](https://github.com/cawa-93/vite-electron-builder/issues?q=label%3A%22help+wanted%22+is%3Aopen+is%3Aissue)
 [![Required Node.JS >= v16.13](https://img.shields.io/static/v1?label=node&message=%3E=16.13&logo=node.js&color)](https://nodejs.org/about/releases/)
 [![Required npm >= v8.1](https://img.shields.io/static/v1?label=npm&message=%3E=8.1&logo=npm&color)](https://github.com/npm/cli/releases)
 
-> Vite+Electron = 🔥
+> Vite+Electron + React = 🔥
 
-This is a secure template for electron applications. Written following the latest safety requirements, recommendations and best practices.
+![image info](./images/nota.png)
+
+This is a fast and simple, crossplatform app for writing markdown. Written following the latest safety requirements, recommendations and best practices.
 
 Under the hood is used [Vite] — superfast, nextgen bundler, and [electron-builder] for compilation.
 
-
 ___
 ### Support
+- To generate the Boilerplate code I used the [Vite Electron Builer Template](https://github.com/cawa-93/vite-electron-builder).
+- It uses Vue by default but I managed to change it to React
 - This template maintained by [Alex Kozack][cawa-93-github]. You can [💖 sponsor him][cawa-93-sponsor] for continued development of this template.
-
-- Found a problem? Pull requests are welcome.
-
-- If you have ideas, questions or suggestions - **Welcome to [discussions](https://github.com/cawa-93/vite-electron-builder/discussions)**. 😊
 ___
-
-
-
 
 ## Get started
 
-Follow these steps to get started with this template:
+### Dev Mode
+You can clone the repo into your local machine:
+```console
+git clone https://github.com/katungi/nota
+```
+Now you can `cd` into the app and run it:
+```console
+cd nota
+```
+Now to run the application, use the following command:
+```console
+npm run watch
+```
 
-1. Click the **[Use this template](https://github.com/cawa-93/vite-electron-builder/generate)** button (you must be logged in) or just clone this repo.
-2. If you want to use another package manager don't forget edit [`.github/workflows`](/.github/workflows) -- it uses `npm` by default.
+### Release Mode
+- ⚠️ Coming soon when I bundle the app for different formats ⚠️
 
-That's all you need. 😉
-
-**Note**: This template uses npm v7 feature — [**Installing Peer Dependencies Automatically**](https://github.com/npm/rfcs/blob/latest/implemented/0025-install-peer-deps.md). If you are using a different package manager, you may need to install some peerDependencies manually.
-
-
-**Note**: Find more usefull forks [here](https://github.com/cawa-93/vite-electron-builder/discussions/categories/forks).
-
-
-## Features
+## Features and Tech Used
 
 ### Electron [![Electron version](https://img.shields.io/github/package-json/dependency-version/cawa-93/vite-electron-builder/dev/electron?label=%20)][electron]
-- Template use the latest electron version with all the latest security patches.
 - The architecture of the application is built according to the security [guides](https://www.electronjs.org/docs/tutorial/security) and best practices.
 - The latest version of the [electron-builder] is used to compile the application.
 
@@ -57,7 +55,7 @@ Vite provides you with many useful features, such as: `TypeScript`, `TSX/JSX`, `
 
 
 ### TypeScript [![TypeScript version](https://img.shields.io/github/package-json/dependency-version/cawa-93/vite-electron-builder/dev/typescript?label=%20)][typescript] (optional)
-- The Latest TypeScript is used for all source code. 
+- The Latest TypeScript is used for all source code. You know I am a Ts FanBoy 🕺
 - **Vite** supports TypeScript out of the box. However, it does not support type checking.
 - Code formatting rules follow the latest TypeScript recommendations and best practices thanks to [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin).
 - Automatically create interface declarations for all APIs that have been passed to `electron.contextBridge.exposeInMainWorld`.
@@ -66,10 +64,9 @@ Vite provides you with many useful features, such as: `TypeScript`, `TSX/JSX`, `
 **[See this discussion](https://github.com/cawa-93/vite-electron-builder/discussions/339)** if you want completly remove TypeScript. 
 
 
-### Vue [![Vue version](https://img.shields.io/github/package-json/dependency-version/cawa-93/vite-electron-builder/vue?label=%20&)][vue] (optional)
-- By default, web pages are built using [Vue]. However, you can easily change it. Or do not use additional frameworks at all.
-- Code formatting rules follow the latest Vue recommendations and best practices thanks to [eslint-plugin-vue].
-- Installed [Vue.js devtools beta](https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg) with Vue 3 support.
+### React 
+- By default, web pages are built using [React]. 
+- Code formatting rules follow the latest React recommendations and best practices thanks to [eslint-plugin-react].
 
 See [examples of web pages for different frameworks](https://github.com/vitejs/vite/tree/main/packages/create-vite).
 
@@ -89,9 +86,6 @@ See [examples of web pages for different frameworks](https://github.com/vitejs/v
   - Code signing supported. See [`compile` job in `release` workflow](.github/workflows/release.yml).
 - **Auto-update is supported**. After the release will be published, all client applications will download the new version and install updates silently.
 
-## How it works
-The template required a minimum [dependencies](package.json). Only **Vite** is used for building, nothing more.
-
 ### Project Structure
 
 The structure of this template is very similar to the structure of a monorepo.
@@ -104,131 +98,18 @@ Used in `BrowserWindow.webPreferences.preload`. See [Checklist: Security Recomme
 - [`packages/renderer`](packages/renderer)
 Electron [**web page**](https://www.electronjs.org/docs/tutorial/quick-start#create-a-web-page).
 
-### Build web resources
+## Contributing
 
-Packages `main` and `preload` are built in [library mode](https://vitejs.dev/guide/build.html#library-mode) as it is a simple javascript.
-`renderer` package build as regular web app.
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
+If you have **_Any_** ideas about the project, Feel free to open an issue. I have no life so I will respond almost immediately.
 
-### Compile App
-Next step is run  packaging and compilation a ready for distribution Electron app for macOS, Windows and Linux with "auto update" support out of the box. 
+## Author
 
-To do this, using the [electron-builder]:
-- In npm script `compile`: This script is configured to compile the application as quickly as possible. It is not ready for distribution, is compiled only for the current platform and is used for debugging.
-- In GitHub Action: The application is compiled for any platform and ready-to-distribute files are automatically added to the draft GitHub release. 
+**Daniel Dennis** - _Initial work_ - [Other Works](https://github.com/katungi/)
 
-### Working with dependencies
-There is one important nuance when working with dependencies. 
-On build stage Vite analyze your code, finds all the imported dependencies, applies tree shaking, optimization and **bundle them inside the output source files**. So when you write something like that:
-```ts
-// source.ts
-import {createApp} from 'vue'
-createApp()
-```
-It turns into:
-```js
-// bundle.js
-function createApp() { /* ... */ }
-createApp()
-```
-And there are really no imports left in runtime.
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-**But it doesn't always work**. Vite was designed to work with browser-oriented packages. So it is not able to bundle Node built-in modules, or native dependencies, or some Node.js specific packages, or Electron itself.
+## License
 
-Modules that Vite is unable to bundle are forced to be supplied as `external` in `vite.config.js`. External modules are not optimized and their imports remain in runtime.
-
-```ts
-// source.ts
-import {writeFile} from 'fs'
-writeFile()
-
-// bundle.js
-const {writeFile} = require('fs')
-writeFile()
-```
-
-### Using external modules in renderer
-According to [Electron's security guidelines](https://www.electronjs.org/docs/tutorial/security#2-do-not-enable-nodejs-integration-for-remote-content), Node.js integration is disabled for remote content. This means that **you cannot call any Node.js api in the `packages/renderer` directly**. This also means you can't import external modules in runtime in renderer:
-```js
-// renderer.bundle.js
-const {writeFile} = require('fs') // ReferenceError: require is not defined
-writeFile()
-```
-
-To use external modules in Renderer you **must** describe the interface in the `packages/preload` where Node.js api is allowed:
-```ts
-// packages/preload/src/index.ts
-import type {BinaryLike} from 'crypto';
-import {createHash} from 'crypto';
-
-contextBridge.exposeInMainWorld('nodeCrypto', {
-  sha256sum(data: BinaryLike) {
-    const hash = createHash('sha256');
-    hash.update(data);
-    return hash.digest('hex');
-  },
-});
-```
-
-The [`dts-cb`](https://github.com/cawa-93/dts-for-context-bridge) utility will automatically generate an interface for TS:
-```ts
-// packages/preload/exposedInMainWorld.d.ts 
-interface Window {
-    readonly nodeCrypto: { sha256sum(data: import("crypto").BinaryLike): string; };
-}
-```
-And now, you can safely use the registered method:
-```ts
-// packages/renderer/src/App.vue
-window.nodeCrypto.sha256sum('data')
-```
-
-[Read more about Security Considerations](https://www.electronjs.org/docs/tutorial/context-isolation#security-considerations).
-
-
-### Modes and Environment Variables
-All environment variables set as part of the `import.meta`, so you can access them as follows: `import.meta.env`. 
-
-If you are using a TypeScript and want to get Code completion you must add all the environment variables to the [`ImportMetaEnv` in `types/vite-env.d.ts`](types/vite-env.d.ts).
-
-The mode option is used to specify the value of `import.meta.env.MODE` and the corresponding environment variables files that needs to be loaded.
-
-By default, there are two modes:
-  - `production` is used by default
-  - `development` is used by `npm run watch` script
-
-When running building, environment variables are loaded from the following files in your project root:
-
-```
-.env                # loaded in all cases
-.env.local          # loaded in all cases, ignored by git
-.env.[mode]         # only loaded in specified env mode
-.env.[mode].local   # only loaded in specified env mode, ignored by git
-```
-
-To prevent accidentally leaking env variables to the client, only variables prefixed with `VITE_` are exposed to your Vite-processed code. e.g. the following file:
-
-```
-DB_PASSWORD=foobar
-VITE_SOME_KEY=123
-```
-Only `VITE_SOME_KEY` will be exposed as `import.meta.env.VITE_SOME_KEY` to your client source code, but `DB_PASSWORD` will not.
-
-
-## Contribution
-
-See [Contributing Guide](contributing.md).
-
-
-[vite]: https://github.com/vitejs/vite/
-[electron]: https://github.com/electron/electron
-[electron-builder]: https://github.com/electron-userland/electron-builder
-[vue]: https://github.com/vuejs/vue-next
-[vue-router]: https://github.com/vuejs/vue-router-next/
-[typescript]: https://github.com/microsoft/TypeScript/
-[playwright]: https://playwright.dev
-[vitest]: https://vitest.dev
-[vue-tsc]: https://github.com/johnsoncodehk/vue-tsc
-[eslint-plugin-vue]: https://github.com/vuejs/eslint-plugin-vue
-[cawa-93-github]: https://github.com/cawa-93/
-[cawa-93-sponsor]: https://www.patreon.com/Kozack/
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
