@@ -61,14 +61,9 @@ Vite provides you with many useful features, such as: `TypeScript`, `TSX/JSX`, `
 - Automatically create interface declarations for all APIs that have been passed to `electron.contextBridge.exposeInMainWorld`.
   Thanks [dts-for-context-bridge](https://github.com/cawa-93/dts-for-context-bridge)  [![dts-for-context-bridge version](https://img.shields.io/github/package-json/dependency-version/cawa-93/vite-electron-builder/dev/dts-for-context-bridge?label=%20&color=yellow)](https://github.com/cawa-93/dts-for-context-bridge).
 
-**[See this discussion](https://github.com/cawa-93/vite-electron-builder/discussions/339)** if you want completly remove TypeScript. 
-
-
 ### React 
 - By default, web pages are built using [React]. 
 - Code formatting rules follow the latest React recommendations and best practices thanks to [eslint-plugin-react].
-
-See [examples of web pages for different frameworks](https://github.com/vitejs/vite/tree/main/packages/create-vite).
 
 ### Continuous Integration
 - The configured workflow for check the types for each push and PR.
